@@ -1,0 +1,1 @@
+Este código apresenta um menu de restaurante simples com três itens e a capacidade de adicionar itens a um carrinho de pedidos. O JavaScript no final da página lida com a lógica de adicionar itens ao carrinho. Este é apenas um exemplo básico e você pode expandi-lo conforme necessário para atender às necessidades específicas do seu projeto.# teste-cardapio
