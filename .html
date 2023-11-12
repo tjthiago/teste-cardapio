@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu do Restaurante</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Restaurante XYZ</h1>
+    </header>
+
+    <section>
+        <div class="menu-item">
+            <span>Pizza Margherita</span>
+            <button onclick="addToCart('Pizza Margherita', 12.99)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <span>Massa Carbonara</span>
+            <button onclick="addToCart('Massa Carbonara', 14.99)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <span>Sushi Combo</span>
+            <button onclick="addToCart('Sushi Combo', 18.99)">Adicionar</button>
+        </div>
+
+        <!-- Adicione mais itens conforme necessário -->
+
+        <h2>Carrinho de Pedidos</h2>
+        <ul id="cart"></ul>
+    </section>
+
+    <script>
+        function addToCart(item, price) {
+            const cart = document.getElementById('cart');
+            const listItem = document.createElement('li');
+            listItem.textContent = `${item} - $${price.toFixed(2)}`;
+            cart.appendChild(listItem);
+        }
+    </script>
+
+</body>
+</html>
